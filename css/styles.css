@@ -18,6 +18,10 @@
   --work-details: rgba(33, 150, 243, 0.9);
   --modal-background: rgba(0, 0, 0, 0.2);
   --studio-details: rgba(47, 48, 58, 0.8);
+  --border-modal: rgba(33, 33, 33, 0.2);
+  --color-comment: rgba(117, 117, 117, 0.5);
+  --filter-footer: rgba(0, 0, 0, 0.15);
+  --color-email: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -477,6 +481,10 @@ svg {
 
 /**FOOTER*/
 
+.support-site {
+  padding-left: 70px;
+}
+
 .main-footer {
   background: var(--background-color);
 }
@@ -540,7 +548,6 @@ address {
 
 .contact-link {
   margin-bottom: 9px;
-  margin-right: 92px;
 }
 
 .list .contact-link {
@@ -611,7 +618,7 @@ li {
   min-width: 23px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-click {
@@ -744,6 +751,7 @@ li {
   position: absolute;
   width: 528px;
   height: 581px;
+  padding: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -786,8 +794,8 @@ li {
 }
 
 .close-modal {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   margin: 4px;
 
   fill: currentColor;
@@ -795,4 +803,203 @@ li {
 
 .no-scroll {
   overflow: hidden;
+}
+
+/**MODAL-FORM**/
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  color: var(--primary-color);
+}
+
+.modal-form {
+  padding: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--grey-color);
+}
+
+.for-element {
+  position: relative;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--grey-color);
+}
+
+.for-element:first-child {
+  margin-top: 0px;
+}
+
+.for-element .form-label-icon input {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+
+  border: 1px solid var(--border-modal);
+  border-radius: 4px;
+
+  cursor: pointer;
+  outline-color: var(--link-color);
+}
+
+.for-element .btn {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+}
+
+.btn-modal {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--prelink-color);
+}
+
+.for-element .comment {
+  height: 120px;
+  border: 1px solid var(--border-modal);
+  border-radius: 4px;
+}
+
+.contract {
+  color: var(--link-color);
+}
+
+.form-label-icon {
+  position: relative;
+}
+
+.icon-modal {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+
+  display: inline-block;
+  width: 18;
+  height: 18;
+
+  cursor: pointer;
+}
+
+.form-input {
+  padding-left: 42px;
+}
+
+textarea {
+  resize: none;
+  margin-top: 4px;
+  padding-left: 16px;
+  padding-top: 12px;
+
+  cursor: pointer;
+  outline-color: var(--link-color);
+}
+
+.comment {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--color-comment);
+}
+
+.form-label-icon:focus-within > .icon-modal {
+  fill: var(--link-color);
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/**FOOTER-SUB-EMAIL**/
+
+.sub-main {
+  padding-left: 93px;
+}
+
+.sub-elements {
+  display: flex;
+}
+
+.btn-footer {
+  width: 200px;
+  height: 50px;
+
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-footer:hover,
+.btn-footer:focus {
+  background-color: var(--prelink-color);
+}
+
+.sub-main:first-child {
+  display: block;
+}
+
+.for-element-footer input {
+  margin: 0;
+  padding: 0;
+
+  height: 50px;
+  width: 358px;
+  margin-top: 20px;
+  margin-right: 12px;
+  padding-left: 16px;
+
+  border: 2px solid var(--border-footer);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+.icon-telegram {
+  margin-left: 10px;
+}
+
+input::placeholder {
+  color: var(--color-email);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
