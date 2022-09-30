@@ -891,7 +891,18 @@ li {
 }
 
 .contract {
+	position: relative;
   color: var(--link-color);
+  text-decoration: none;
+}
+.contract::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	width: 100%;
+	height: 1px;
+	background-color: var(--link-color);
 }
 
 .main-contract {
