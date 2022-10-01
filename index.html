@@ -422,19 +422,18 @@
 
         <div class="sub-main">
           <span class="title-support">Підпишіться на розсилку</span>
-          <div class="sub-elements">
-            <form>
+            <form class="sub-elements">
               <div class="for-element-footer">
                 <label for="email"></label>
-                <input type="email" name="email" id="email" placeholder="E-mail" />
+                <input class="input-footer" type="email" name="email" id="email" placeholder="E-mail" />
               </div>
+
+			  <button type="submit" class="btn-footer">
+				Підписатися<svg class="icon-telegram" width="24px" height="24px">
+				  <use href="./images/icons.svg#icon-icon-modal-telegram"></use>
+				</svg>
+			  </button>
             </form>
-            <button type="submit" class="btn-footer">
-              Підписатися<svg class="icon-telegram" width="24px" height="24px">
-                <use href="./images/icons.svg#icon-icon-modal-telegram"></use>
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
     </footer>
@@ -477,7 +476,7 @@
           <div class="for-element">
             <label for="email">Пошта</label>
             <div class="form-label-icon">
-              <input type="email" name="email" id="email" class="form-input" />
+              <input type="email" name="email" id="e-mail" class="form-input" />
               <span class="icon-modal">
                 <svg class="cust-icon-modal" width="15px" height="12px">
                   <use href="./images/icons.svg#icon-icon-modal-mail"></use>
@@ -499,10 +498,10 @@
           <div>
             <label class="check-label">
               <input class="checkbox" type="checkbox" name="checkbox" id="agree" />
-              <svg class="cust-icon-modal" width="16px" height="15px">
-                <use class="check-bord" href="./images/icons.svg#icon-check-start"></use>
-                <use class="check-icon" href="./images/icons.svg#icon-check"></use>
-              </svg>
+				<svg class="cust-icon-modal" width="16px" height="15px">
+					<use class="check-bord" href="./images/icons.svg#icon-check-start"></use>
+					<use class="check-icon" href="./images/icons.svg#icon-check"></use>
+				  </svg>
               <span class="main-contract"
                 >Погоджуюся з розсилкою та приймаю
                 <a class="contract" href="#">Умови договору</a></span
