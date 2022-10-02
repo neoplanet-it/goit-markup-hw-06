@@ -779,6 +779,7 @@ li {
   justify-content: center;
   top: 8px;
   right: 8px;
+  padding: 4px;
   border-radius: 50%;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -925,8 +926,8 @@ li {
   left: 15px;
 
   display: inline-block;
-  width: 18;
-  height: 18;
+  width: 18px;
+  height: 18px;
 
   cursor: pointer;
 }
@@ -971,6 +972,12 @@ textarea {
 .check-bord {
   opacity: 1;
   cursor: pointer;
+
+  color: currentColor;
+}
+
+.checkbox-hover {
+  display: inline-block;
 }
 
 .check-icon {
@@ -980,13 +987,17 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .cust-icon-modal > .check-icon {
+.checkbox:checked + .checkbox-hover .cust-icon-modal > .check-icon {
   opacity: 1;
   fill: var(--link-color);
 }
 
-.checkbox:checked + .cust-icon-modal > .icon-accept {
+.checkbox:checked + .cust-icon-modal > .check-bord {
   opacity: 0;
+}
+
+.checkbox:focus + .checkbox-hover {
+  fill: var(--link-color);
 }
 
 .icon-accept {
@@ -1007,13 +1018,13 @@ textarea {
 
 .sub-elements {
   display: flex;
+  padding-top: 20px;
 }
 
 .btn-footer {
   width: 200px;
   height: 50px;
 
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1036,7 +1047,6 @@ textarea {
 
   height: 50px;
   width: 358px;
-  margin-top: 20px;
   margin-right: 12px;
   padding-left: 16px;
 
